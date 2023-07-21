@@ -1,0 +1,26 @@
+Q--  para is a sequence of space-separated words. All words will be in lower case. There will be a single space between consecutive words. The string has no other special characters other than the space.
+
+Write a function named exact_count that accepts the string para and a positive integer 
+�
+n as arguments. You have to return True if there is at least one word in para that occurs exactly 
+�
+n times, and False otherwise.
+
+Ans--def exact_count(para, n):
+    # Split the input string into words
+    words = para.split()
+
+    # Create a dictionary to store word occurrences
+    word_counts = {}
+
+    # Count the occurrences of each word in the input string
+    for word in words:
+        word_counts[word] = word_counts.get(word, 0) + 1
+
+    # Check if there is any word that occurs exactly n times
+    for count in word_counts.values():
+        if count == n:
+            return True
+
+    # If no word occurs exactly n times, return False
+    return False
