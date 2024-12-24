@@ -1,0 +1,20 @@
+s=input()
+def palindrome(s):
+    return s == s[::-1]
+ans=palindrome(s)
+if ans:
+    print("yes")
+else:
+    print("No")
+
+--------------------------------------------------------------------------
+s=input()
+x=""
+for i in s:
+    x=i+x
+if x==s:
+    print("yes")
+else:
+    print("No")
+
+--------------------------------------------------------------------------------
